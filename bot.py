@@ -194,9 +194,9 @@ def calculate_placement(
     Full placement-score calculation with itemised contributions.
 
     Formula:
-      CGPA contribution       = (CGPA / 4.0) × 50
-      Entrance contribution   = (Entrance / 600) × 20
-      Placement contribution  = (Placement / 30) × 30
+      CGPA contribution       = (CGPA / 4.0) * 50
+      Entrance contribution   = (Entrance / 600) * 20
+      Placement contribution  = (Placement / 30) * 30
       Final = sum of the three contributions
     """
     cgpa = calculate_cgpa(first_gpa, second_gpa)
@@ -635,19 +635,19 @@ def build_placement_result_message(result: dict) -> str:
         SEP,
         "",
         "📚 CGPA Contribution:",
-        f"   ({fmt(result['cgpa'])} / 4.0) × 50 = "
+        f"   ({fmt(result['cgpa'])} / 4.0) * 50 = "
         f"{fmt(result['cgpa_contribution'])} / 50",
         "",
         "📝 Entrance Exam:",
         f"   {fmt(result['entrance_score'])}/600",
         f"   Entrance Contribution:",
-        f"   ({fmt(result['entrance_score'])} / 600) × 20 = "
+        f"   ({fmt(result['entrance_score'])} / 600) * 20 = "
         f"{fmt(result['entrance_contribution'])} / 20",
         "",
         "📋 Placement Exam:",
         f"   {fmt(result['placement_exam_score'])}/30",
         f"   Placement Contribution:",
-        f"   ({fmt(result['placement_exam_score'])} / 30) × 30 = "
+        f"   ({fmt(result['placement_exam_score'])} / 30) * 30 = "
         f"{fmt(result['placement_contribution'])} / 30",
         "",
         SEP,
