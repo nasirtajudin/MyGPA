@@ -824,10 +824,8 @@ async def safe_edit(query, text: str, reply_markup=None) -> None:
 # ─── Menu Handlers (Callback Query routing) ───────────────────────────────────
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """
-    /start — reset session and show the main menu.
-    This is the ONLY command users need to type.
-    """
+    # /start - reset session and show the main menu.
+    # This is the ONLY command users need to type.
     user_id = update.effective_user.id
     reset_session(user_id)
     logger.info(f"User {user_id} started/restarted the bot.")
